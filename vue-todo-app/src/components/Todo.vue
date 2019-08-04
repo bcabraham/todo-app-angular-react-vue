@@ -5,12 +5,12 @@
       <b-col md="2" class="pb-2">
         <b-button
           size="md"
-          variant="outline-primary"
+          variant="primary"
           @click="toggleDone"
         >{{ this.todo.completed ? "unDone": "Done" }}</b-button>
       </b-col>
       <b-col md="2" class="pb-2">
-        <b-button size="md" variant="outline-primary" @click="$emit('remove-todo')">Delete</b-button>
+        <b-button size="md" variant="primary" @click="$emit('remove-todo')">Delete</b-button>
       </b-col>
     </b-row>
   </b-list-group-item>

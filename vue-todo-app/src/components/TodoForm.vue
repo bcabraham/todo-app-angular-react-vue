@@ -13,7 +13,7 @@
         ></b-form-input>
       </b-col>
       <b-col md="2">
-        <b-button type="submit" variant="outline-primary">Submit</b-button>
+        <b-button type="submit" variant="primary">Submit</b-button>
       </b-col>
     </b-row>
   </b-form>
