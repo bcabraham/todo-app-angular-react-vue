@@ -23,5 +23,9 @@ export class AppComponent {
     this.nextIndex++;
   }
 
-
+  deleteTodo(id: number) {
+    this.todos = this.todos.filter(todo => {
+      return todo.id !== id;
+    });
+  }
 }

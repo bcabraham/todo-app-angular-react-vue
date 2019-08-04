@@ -1,3 +1,10 @@
-<h2>Angular Todo App</h2>
-<app-todo-form (todoAdded)="addTodo($event)"></app-todo-form>
-<app-todo-list *ngIf="todos.length" [todos]="todos"></app-todo-list>
+<div class="container">
+
+  <h2>Angular Todo App</h2>
+  <app-todo-form (todoAdded)="addTodo($event)"></app-todo-form>
+
+  <h2>TodoList</h2>
+  <ul class="list-group" *ngIf="todos.length">
+    <app-todo *ngFor="let todo of todos" [todo]="todo" (deleteTodo)="deleteTodo($event)"></app-todo>
+  </ul>
+</div>

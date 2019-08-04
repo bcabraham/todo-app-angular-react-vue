@@ -1,2 +1,9 @@
-<p>{{todo.text}}</p>
-<button (click)="onDelete()">Delete</button>
+<div class="list-group-item">
+  <div class="row w-100">
+
+    <p class="col-md-9" [ngClass]="todo.completed ? 'isDone' : ''">{{todo.text}}</p>
+    <button type="submit" class="btn btn-primary col mb-2 mx-2"
+      (click)="onDone()">{{todo.completed ? "unDone" : "Done"}}</button>
+    <button type="submit" class="btn btn-primary col mb-2 mx-2" (click)="onDelete()">Delete</button>
+  </div>
+</div>

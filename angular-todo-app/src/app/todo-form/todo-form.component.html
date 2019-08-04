@@ -1,8 +1,10 @@
 <h2>TodoForm</h2>
-<form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
-  <label>
-    Enter a Todo:
-    <input type="text" formControlName="newTodo">
-  </label>
-  <button type="submit" [disabled]="!newTodoForm.valid">Submit</button>
+<form class="form-inline " [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+  <div class="row w-100">
+    <label class="sr-only col-md-1 mb-2" for="TodoTextInput">Enter a Todo: </label>
+    <input type="text" class="form-control col-md-9 mb-2 mr-sm-2" id="TodoTextInput" formControlName="newTodo"
+      placeholder="Enter a Todo">
+
+    <button type="submit" class="btn btn-primary col-md-1 mb-2">Submit</button>
+  </div>
 </form>

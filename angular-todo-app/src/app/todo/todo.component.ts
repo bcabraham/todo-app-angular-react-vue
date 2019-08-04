@@ -16,6 +16,11 @@ export class TodoComponent implements OnChanges {
     console.log(this.todo);
   }
 
+  onDone() {
+    this.todo.completed = !this.todo.completed;
+    console.log(this.todo);
+  }
+
   onDelete() {
     this.deleteTodo.emit(this.todo.id);
   }
