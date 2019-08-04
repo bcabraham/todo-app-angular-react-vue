@@ -1,0 +1,8 @@
+<h2>TodoForm</h2>
+<form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+  <label>
+    Enter a Todo:
+    <input type="text" formControlName="newTodo">
+  </label>
+  <button type="submit" [disabled]="!newTodoForm.valid">Submit</button>
+</form>
